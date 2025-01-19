@@ -3,6 +3,8 @@ There are bunch of Trainers like FlingTrainer but they might have Password steal
 
 Video link: https://streamable.com/u36jlc
 
+Full step step Undedited (RAW) video: https://youtu.be/68b3LRwEKcQ
+
 Silverbullet v1.1.4: https://github.com/ob2configmaker/SilverBullet
 
 Combos + proxies: https://discord.com/invite/uzwsqSJaZP
