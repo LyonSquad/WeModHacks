@@ -3,8 +3,8 @@
 
 ### **See I am NOT kidding bruh, this really works!!**
 ![Image](https://github.com/user-attachments/assets/01c724a5-f8ac-4924-97ef-6d0adc6d3f3b)
-![Image](https://github.com/user-attachments/assets/934162c1-65c8-4f18-8116-f9a1cc61e2be)
 ![Image](https://github.com/user-attachments/assets/2d962429-07cf-476a-b718-38b13e12305d)
+![Image](https://github.com/user-attachments/assets/2c56dbfd-627c-44ae-afc7-7d2fdac82459)
 ![Image](https://github.com/user-attachments/assets/9e8fcc06-cd73-40fa-b3cb-656c07a27a24)
 
 ### **Example of a full capture hits:**
