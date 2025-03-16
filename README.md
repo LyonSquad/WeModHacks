@@ -49,12 +49,12 @@ Check my **[Facebook group](https://www.facebook.com/groups/svbconfigsmaker)** f
 
 
 ### CONTACT ME!
-**[Reddit](https://www.reddit.com/user/YashvirGaming)**
-**[SUBSCRIBE on YouTube ](https://www.youtube.com/@svbconfigmakerbot)** 
-**[Facebook Group](https://www.facebook.com/groups/svbconfigsmaker)** 
-**[Telegram Channel](https://t.me/svbc0nfigmaker)**
-**[Telegram Channel 2](https://t.me/officialyashvirgaming)**
-**[Discord Channel](https://discord.com/invite/uzwsqSJaZP)**
+**[Reddit](https://www.reddit.com/user/YashvirGaming)**\n
+**[SUBSCRIBE on YouTube ](https://www.youtube.com/@svbconfigmakerbot)**\n
+**[Facebook Group](https://www.facebook.com/groups/svbconfigsmaker)** \n
+**[Telegram Channel](https://t.me/svbc0nfigmaker)**\n
+**[Telegram Channel 2](https://t.me/officialyashvirgaming)**\n
+**[Discord Channel](https://discord.com/invite/uzwsqSJaZP)**\n
 
 
 - _Written by © Yashvir Gaming ©_
