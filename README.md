@@ -19,7 +19,7 @@ All you will need are a Combolist and a set of proxies
 Combolist/Combos/Wordlist are a list that contains email & passwords or usernames & password...
 You find many here: https://discord.com/invite/uzwsqSJaZP
 
-You can get free trial proxies from website below
+<b>You can get free trial proxies from website below</b>
 https://oxylabs.io/products/free-trial-proxies
 https://proxyscrape.com/premium-free-trial
 https://www.proxyrack.com/proxy-free-trial/
@@ -48,3 +48,6 @@ Youtube: https://www.youtube.com/@svbconfigmakerbot/
 Join mah Facebook configs group: https://www.facebook.com/groups/svbconfigsmaker
 Join Telegram Channel: @svbc0nfigmaker  / @officialyashvirgaming
 Discord username: @pipinstallme , Discord Channel: https://discord.com/invite/uzwsqSJaZP
+
+![Image](https://github.com/user-attachments/assets/a724074b-991b-478e-afd8-cc684654ce48)
+![Image](https://github.com/user-attachments/assets/8ae1fb0a-d1fa-4e34-8345-0658066d3288)
